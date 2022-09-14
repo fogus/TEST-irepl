@@ -1,0 +1,27 @@
+{
+ :paths ["src"]
+ :deps  {org.clojure/clojure {:mvn/version "1.12.0-alpha1"}
+         org.clojure/core.cache {:mvn/version "1.0.225"}}
+
+ :aliases
+ {
+  :jfx/rebl ;; for JDK 11+
+  {:extra-deps {io.github.cognitect-labs/replicant {:local/root "../replicant"}
+                com.cognitect/rebl          {:local/root "../rebl"}
+                org.openjfx/javafx-fxml     {:mvn/version "15-ea+6"}
+                org.openjfx/javafx-controls {:mvn/version "15-ea+6"}
+                org.openjfx/javafx-swing    {:mvn/version "15-ea+6"}
+                org.openjfx/javafx-base     {:mvn/version "15-ea+6"}
+                org.openjfx/javafx-web      {:mvn/version "15-ea+6"}}}
+
+  :jfx/cider
+  {:extra-deps {nrepl/nrepl {:mvn/version "0.9.0"}
+                cider/cider-nrepl {:mvn/version "0.28.3"}}
+   :main-opts ["-m" "nrepl.cmdline"
+               "--middleware" "[cider.nrepl/cider-middleware]"]}
+ }
+
+ :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
+             "clojars" {:url "https://repo.clojars.org/"}
+             "cognitect-dev-tools" {:url "https://dev-tools.cognitect.com/maven/releases/"}}
+}

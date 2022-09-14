@@ -1,0 +1,14 @@
+At the command promt run:
+
+    clj -M:jfx/rebl:jfx/cider
+
+Then connect in Emacs with `cider-connect`
+
+In the CIDER REPL:
+
+    (require 'cognitect.rebl)
+    (cognitect.rebl/ui :mode in-proc)
+
+Send an expression to REBL:
+
+    (cognitect.rebl/inspect ...expression...)
