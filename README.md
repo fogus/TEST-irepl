@@ -9,7 +9,7 @@ Then connect in Emacs with `cider-connect`
 In the CIDER REPL:
 
     (require 'cognitect.rebl)
-    (cognitect.rebl/ui :mode in-proc)
+    (cognitect.rebl/ui :mode :in-proc)
 
 Send an expression to the inspector:
 
