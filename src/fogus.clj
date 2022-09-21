@@ -18,5 +18,12 @@
 
   (cognitect.rebl/inspect (cache/through-cache C1 :c (constantly 42)))
 
+  (require '[clojure.core.protocols :as p])
+  (require '[clojure.datafy :as d])
+
+  (extend-protocol p/Datafiable
+    clojure.core.cache.FIFOCache
+    (datafy [c]
+      (seq (.cache c))))
 )
-<
+

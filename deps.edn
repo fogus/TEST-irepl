@@ -6,13 +6,14 @@
  :aliases
  {
   :jfx/rebl ;; for JDK 11+
-  {:extra-deps {io.github.cognitect-labs/replicant {:local/root "../replicant"}
-                com.cognitect/rebl          {:local/root "../rebl"}
-                org.openjfx/javafx-fxml     {:mvn/version "15-ea+6"}
-                org.openjfx/javafx-controls {:mvn/version "15-ea+6"}
-                org.openjfx/javafx-swing    {:mvn/version "15-ea+6"}
-                org.openjfx/javafx-base     {:mvn/version "15-ea+6"}
-                org.openjfx/javafx-web      {:mvn/version "15-ea+6"}}}
+  {:extra-deps {io.github.cognitect-labs/rds {:local/root "../rds"}
+                com.cognitect/rebl           {:local/root "../rebl"}
+                io.github.cognitect-labs/replicant-client {:local/root "../replicant-client"}
+                org.openjfx/javafx-fxml      {:mvn/version "15-ea+6"}
+                org.openjfx/javafx-controls  {:mvn/version "15-ea+6"}
+                org.openjfx/javafx-swing     {:mvn/version "15-ea+6"}
+                org.openjfx/javafx-base      {:mvn/version "15-ea+6"}
+                org.openjfx/javafx-web       {:mvn/version "15-ea+6"}}}
 
   :jfx/cider
   {:extra-deps {nrepl/nrepl {:mvn/version "0.9.0"}
